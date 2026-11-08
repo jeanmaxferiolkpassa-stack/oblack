@@ -1,0 +1,86 @@
+/* app/globals.css */
+/* Styles de base O'Black : noir + jaune */
+
+@import "tailwindcss";
+
+:root {
+  --oblack-noir: #000000;
+  --oblack-jaune: #facc15;
+  --oblack-gris: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--oblack-gris);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--oblack-noir);
+  border-radius: 4px;
+}
+
+/* Bouton principal O'Black */
+.btn-oblack {
+  background: var(--oblack-noir);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-oblack:hover {
+  background: var(--oblack-jaune);
+  color: var(--oblack-noir);
+}
+
+/* Bouton secondaire */
+.btn-oblack-outline {
+  border: 2px solid var(--oblack-noir);
+  color: var(--oblack-noir);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-oblack-outline:hover {
+  background: var(--oblack-noir);
+  color: white;
+}
+
+/* Animation du splash (logo) */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.splash-logo {
+  animation: fadeInScale 0.8s ease-out forwards;
+}
+
+/* Badge "Bientôt disponible" */
+.badge-bientot {
+  background: var(--oblack-gris);
+  color: #888;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
